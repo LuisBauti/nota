@@ -24,3 +24,11 @@ class Note:
         global last_id
         last_id += 1
         self.id = last_id
+
+    def search(self, filter):
+        """
+        Determina si la nota actual está contenida en el valor
+        del filtro (distingue mayúsculas de minúsculas). 
+        Retorna True si es igual o False en caso contrario.
+        """
+        return filter in self.memo or filter in self.tags
